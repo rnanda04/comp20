@@ -1,0 +1,62 @@
+songs = [  
+{
+    "title": "Hall of Fame",
+	"artist": "The Script",
+	"genre": ["Pop", "Alt"],
+	"year": 2012,
+},
+{
+    "title": "Born For This",
+	"artist": "The Score",
+	"genre": ["Alt"],
+	"year": 2019,
+},
+{
+    "title": "Bangarang",
+	"artist": "Skillrex",
+	"genre": ["EDM"],
+	"year": 2011,
+},
+{
+    "title": "Golden",
+	"artist": "Brandon Beal",
+	"genre": ["Pop", "Rap"],
+	"year": 2016,
+},
+{
+    "title": "I Bet My Life",
+	"artist": "Imagine Dragons",
+	"genre": ["Alt"],
+	"year": 2015, 
+},
+{
+    "title": "Lights",
+	"artist": "Ellie Goulding",
+	"genre": ["Pop"],
+	"year": 2010,
+},
+{
+    "title": "Warriors",
+	"artist": "Imagine Dragons",
+	"genre": ["Alt"],
+	"year": 2015,
+},
+{
+    "title": "Time",
+	"artist": "NF",
+	"genre": ["Pop", "Rap"],
+	"year": 2019,
+},
+{
+    "title": "Young Volcanoes",
+	"artist": "Fall Out Boy",
+	"genre": ["Alt", "Pop"],
+	"year": 2012,
+},
+{
+    "title": "It's Time",
+	"artist": "Imagine Dragons",
+	"genre": ["Alt"],
+	"year": 2012,
+}
+]

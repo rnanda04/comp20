@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Assignment 9</title>
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+<script language="javascript" type="text/javascript" src="songlist.json"></script>
+</head>
+    
+<body>
+    <script language="javascript">
+
+        //Get JSON Data and print string
+        songlist = JSON.stringify(songs);
+        song = JSON.parse(songlist);
+        document.write(songlist + "<br><br>");
+        
+        //Print User Friendly Display
+        for (i = 0; i < 10; i++) {
+            document.write(song[i].title + "<br>");
+            document.write("Artist: " + song[i].artist + "<br>");
+            document.write("Genre: " + song[i].genre + "<br>");
+            document.write("Released " + song[i].year + "<br><br>");
+        }
+        
+        //Print Only Selected
+        $(document).ready(function() {
+            $('button').click(function() {
+                document.getElementById("selected").innerHTML = "";
+                
+                //Figure out which genre was picked
+                var selectedGenre;
+                if ($('select[name="genres"] option:selected').index() == 0) {
+                    selectedGenre = "Pop";
+                } else if ($('select[name="genres"] option:selected').index() == 1) {
+                    selectedGenre = "Alt"
+                } else if ($('select[name="genres"] option:selected').index() == 2) {
+                    selectedGenre = "EDM"
+                } else if ($('select[name="genres"] option:selected').index() == 3) {
+                    selectedGenre = "Rap"
+                }
+                
+                //Print song names
+                for (i = 0; i < 10; i++) {
+                    if (song[i].genre[0] == selectedGenre || song[i].genre[1] == selectedGenre) {
+                        document.getElementById("selected").innerHTML += song[i].title + "<br>";
+                    }
+                }
+            })
+        })
+    
+    </script>
+    
+    <br>
+    <h3 style="font-family:sans-serif">Choose a genre to filter by</h3>
+    <select name="genres" id="genres">
+        <option value="Pop">Pop</option>
+        <option value="Alt">Alt</option>
+        <option value="EDM">EDM</option>
+        <option value="Rap">Rap</option>
+    </select>
+    <button id="filter">Filter</button>
+    
+    <div id="selected"></div>
+    
+</body>
+</html>
